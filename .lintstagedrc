@@ -1,0 +1,9 @@
+# vim:set et sw=2 ts=2 tw=120 ft=yaml:
+# https://github.com/okonet/lint-staged configuration, written in YAML.
+---
+
+"*.js":
+  # Reformat the code before git commitment.
+  - "npm run format:fix --write  --staged"
+  - "npm run lint --fix"
+  - "git add"
