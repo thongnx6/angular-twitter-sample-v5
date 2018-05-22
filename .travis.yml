@@ -1,0 +1,38 @@
+# Install node
+sudo: true
+dist: trusty
+language: node_js
+node_js:
+ - "node"
+
+# Make docker available
+services:
+  - docker
+
+# Install and configure the latest stable version of Chrome
+addons:
+apt:
+  sources:
+    - google-chrome
+  packages:
+    - google-chrome-stable
+
+before_install:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+before_script:
+# Download all javascript packages that the app uses
+- npm install
+
+script: 
+# Run test coverage
+- npm run test:coverage 
+# Run all tests and do not watch files, quit immediately after
+- npm run test:ci
+# # Run all end to end protractor tests looklike selenium but more special for Angular
+# - npm run e2e
+
+# after_success:
+# If the build is successful and branch is master, prepare for packaging and deployment (future)
