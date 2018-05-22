@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "clean:coverage": "rimraf coverage",
-    "test:coverage": "npm run clean:coverage && ng test --watch-false --code-coverage",
+    "test:coverage": "npm run clean:coverage && ng test --watch=false --code-coverage",
     "test:ci": "ng test --watch=false",
     "format:fix": "pretty-quick",
     "precommit": "lint-staged",
