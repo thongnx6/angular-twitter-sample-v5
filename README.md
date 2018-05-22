@@ -1,4 +1,5 @@
-# Prj
+# AnyMind Angular twitter sample 
+[![Build Status](https://travis-ci.org/thongnx6/angular-twitter-sample-v5.svg?branch=master)](https://travis-ci.org/thongnx6/angular-twitter-sample-v5)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
