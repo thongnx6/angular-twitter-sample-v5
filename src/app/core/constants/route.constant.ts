@@ -18,6 +18,8 @@ export interface IRoutePaths {
     };
     /** HASHTAG Screen */
     HASHTAG: MnRoute;
+    /** USER Screen */
+    USER: MnRoute;
 }
 
 /**
@@ -41,10 +43,19 @@ export const RouteConstant: IRoutePaths = {
         },
     },
     HASHTAG: {
-        path: '',
+        path: 'hashtag',
         data: {
-            title: 'HashTag',
+            title: 'Hashtag',
             icon: 'home',
+            pId: 'hashtag'
+        }
+    },
+    USER: {
+        path: 'users',
+        data: {
+            title: 'User',
+            icon: 'home',
+            pId: 'user'
         }
     },
 };
