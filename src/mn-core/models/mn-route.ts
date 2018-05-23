@@ -22,6 +22,8 @@ export interface MnRouteData {
     title?: string;
     // Page icon
     icon?: string;
+    // page identify
+    pId?: string;
     // Parameters of config to be acquired before screen display
     configResolveParam?: string;
 }
