@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <app-hashtag-search [search]="search$ | async" (searchStart)="onSearchStart($event)"></app-hashtag-search>
+
+  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 100%; height: 6px;" *ngIf="listRequested"></div>
+  <div class="section-list">
+    <app-hashtag-list [items]="(items$ | async)"></app-hashtag-list>
+  </div>
+</div>
