@@ -31,7 +31,7 @@ Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github
 
 ## Running unit test coverage
 
-Run `test:coverage` to execute the coverage tests.
+Run `npm test:coverage` to execute the coverage tests.
 
 ## Running end-to-end tests (WIP)
 
