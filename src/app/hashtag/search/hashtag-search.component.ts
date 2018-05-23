@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class HashtagSearchComponent implements OnInit {
   /** Search condition */
-  @Input() search: any;
+  @Input() search: any = { filter: '' };
   /** Start search */
   @Output() searchStart: EventEmitter<any> = new EventEmitter<any>();
 
@@ -23,12 +23,12 @@ export class HashtagSearchComponent implements OnInit {
   ngOnInit() {
     // Create FormGroup of search condition
     this.form = this.fb.group(Object.assign({}, this.search));
-
     // Filter control
     const filterCtr = this.form.get('filter');
-    filterCtr.valueChanges.subscribe(filter => {
-      this.searchStart.emit(Object.assign({}, this.form.value, { filter }));
-    });
+    if (filterCtr) {
+      filterCtr.valueChanges.subscribe(filter => {
+        this.searchStart.emit(Object.assign({}, this.form.value, { filter }));
+      });
+    }
   }
-
 }

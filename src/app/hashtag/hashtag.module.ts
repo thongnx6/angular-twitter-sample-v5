@@ -13,7 +13,7 @@ import { HashtagListComponent } from './list/hashtag-list.component';
 @NgModule({
   imports: [
     CommonModule,
-    AppSharedModule,
+    AppSharedModule.forRoot(),
     routing
   ],
   declarations: [HashtagIndexComponent, HashtagSearchComponent, HashtagListComponent]
