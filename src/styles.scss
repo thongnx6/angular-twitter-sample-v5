@@ -1,0 +1,26 @@
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// table
+.section-list {
+  background: #fff;
+  padding: 24px;
+  box-shadow: 4px 4px 4px #aaaaaa;
+
+  .table {
+    th {
+      border-top: 0;
+      font-weight: 500;
+      border-top: 0;
+    }
+    .avoid-data {
+      text-align: center;
+      color:#aaaaaa;
+    }
+  }
+
+  .page-link.avtive {
+    color: #007bff;
+    font-weight: bold;
+  }
+}

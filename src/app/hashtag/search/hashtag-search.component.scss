@@ -1,0 +1,15 @@
+.search-box {
+  position: relative;
+  label {
+    color: #858587;
+  }
+  .form-control {
+    padding-right: 32px;
+  }
+  i {
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    color: #a4b8c4;
+  }
+}

@@ -11,11 +11,7 @@
       "check-space"
     ],
     "curly": true,
-    "deprecation": {
-      "severity": "warn"
-    },
     "eofline": true,
-    "forin": true,
     "import-blacklist": [
       true,
       "rxjs",
@@ -48,8 +44,6 @@
     "no-bitwise": true,
     "no-console": [
       true,
-      "debug",
-      "info",
       "time",
       "timeEnd",
       "trace"
