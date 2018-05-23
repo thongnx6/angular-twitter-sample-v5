@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
 import { RouteConstant, ROUTES_CONSTANT } from './constants';
 
 // services
-import { HashtagService } from './services';
+import { HashtagService, UserService } from './services';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 // CORE_PROVIDERS
 const CORE_PROVIDERS = [
@@ -14,14 +15,15 @@ const CORE_PROVIDERS = [
     provide: ROUTES_CONSTANT,
     useValue: RouteConstant
   },
-  HashtagService
+  HashtagService,
+  UserService
 ];
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [NotFoundComponent]
 })
 export class AppCoreModule {
   static forRoot(): ModuleWithProviders {

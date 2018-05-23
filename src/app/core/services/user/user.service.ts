@@ -3,13 +3,13 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { Http, URLSearchParams, Response, RequestOptionsArgs, RequestOptions, Headers } from '@angular/http';
 
-import { Hashtag } from '../../models';
+import { User } from '../../models';
 
 @Injectable()
-export class HashtagService {
+export class UserService {
 
   private get resource(): string {
-    const _resource = 'hashtags/Python';
+    const _resource = 'users/Twitter';
     return _resource;
   }
 
@@ -17,7 +17,7 @@ export class HashtagService {
     private http: Http
   ) { }
 
-  fetchItems(search): Observable<Array<Hashtag>> {
+  fetchItems(search): Observable<Array<User>> {
     const params = this.parseParams(search);
     return this.http.get(this.resource, { search: params })
       .map(this.mapHashtag.bind(this));
